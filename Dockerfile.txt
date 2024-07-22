@@ -1,0 +1,8 @@
+FROM python:3.12
+WORKDIR /apps
+COPY C:/Users/ntatpuj/PYthon_projects/Socket_programing
+RUN apt-get update && apt-get install -y python3 python3-pip
+RUN pip install python-socketio
+EXPOSE 12345
+CMD ["python3", "Server_side_code.py"]
+
